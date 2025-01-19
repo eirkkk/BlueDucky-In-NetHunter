@@ -55,10 +55,7 @@ cd BluetoothDucky
 
 ## Example Usage
 ```
-sudo python3 BluetoothDucky.py -i hci0 -t 00:00:00:00:00:00
-```
-```
-sudo python3 BluetoothDucky.py --scan
+sudo python3 BluetoothDucky.py 
 ```
 
 It will look for a payload.txt file in the same directory which can just be ducky script - try something simple provided in this repo to start.
