@@ -13,10 +13,9 @@ ENTER
 That should type in test123 in a text field and then press ENTER. 
 
 
-- Just putting this code up for anyone wanting to help.
-
+Setup 
   ```
-  curl -o https://raw.githubusercontent.com/eirkkk/BlueDucky-In-NetHunter/refs/heads/main/setup | bash
+  curl -sSL https://raw.githubusercontent.com/eirkkk/BlueDucky-In-NetHunter/main/setup | bash
   ```
 
 ## Example Usage
