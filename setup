@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Update and upgrade system packages
+echo "Updating and upgrading system packages..."
+sudo apt-get update && sudo apt-get -y upgrade
+
+# Install dependencies from apt
+echo "Installing dependencies from apt..."
+sudo apt install -y bluez-tools bluez-hcidump libbluetooth-dev \
+                    git gcc python3-pip python3-setuptools \
+                    python3-pydbus
+
+# Install pybluez from source
+echo "Installing pybluez from source..."
+git clone https://github.com/pybluez/pybluez.git && \
+cd pybluez && \
+sudo python3 setup.py install && \
+cd ~/
+
+# Build bdaddr from the bluez source
+echo "Building bdaddr from the bluez source..."
+git clone --depth=1 https://github.com/bluez/bluez.git && \
+gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth && \
+sudo cp bdaddr /usr/local/bin/
+
+# Install required Python packages with --break-system-packages
+echo "Installing required Python packages..."
+pip install --break-system-packages colorama art
+
+echo "Installation completed successfully!"
