@@ -15,15 +15,9 @@ That should type in test123 in a text field and then press ENTER.
 
 - Just putting this code up for anyone wanting to help.
 
-  Installation instructions (Stolen from marcnewlin)
-```
-
-```
-
-Then simply
-```
-
-```
+  ```
+  curl -o https://raw.githubusercontent.com/eirkkk/BlueDucky-In-NetHunter/refs/heads/main/setup | bash
+  ```
 
 ## Example Usage
 ```
