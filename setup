@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd 
 # Update and upgrade system packages
 echo "Updating and upgrading system packages..."
 sudo apt-get update && sudo apt-get -y upgrade
@@ -28,3 +28,5 @@ echo "Installing required Python packages..."
 pip install --break-system-packages colorama art
 
 echo "Installation completed successfully!"
+git clone https://github.com/eirkkk/BlueDucky-In-NetHunter
+cd BlueDucky-In-NetHunter
